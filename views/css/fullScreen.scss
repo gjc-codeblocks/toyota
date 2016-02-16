@@ -1,0 +1,490 @@
+$myFont: 'Source Sans Pro', sans-serif; 
+
+body{
+	background-color: black;
+}
+
+.adBlock{
+	background-color: black;
+	position: absolute;
+	top: 60px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+}
+
+.fullScreen{
+	max-width: 1680px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	
+	@media screen and (max-width: 400px){
+		height: 100%;
+	}
+	
+	@media screen and (min-width: 1300px){
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	@media screen and (min-width: 401px) and (max-width: 700px){
+		width: 100% !important;
+		
+		.carro{
+			background-size: 100% !important;
+			background-position-x: 73% !important;
+			background-position-y: 13% !important;
+		}
+	}
+	
+	header{
+		height: 60px;
+		border-bottom: 1px inset #3E72A3;
+		background-color: #1F4777;
+		z-index: 99;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		
+		.logo{
+			width: 12%;
+			float: left;
+			margin-left: 2%;
+			
+			@media screen and (min-width: 401px) and (max-width: 700px){
+				width: 30%;
+			}
+		}
+		
+		.close{
+			height: 100%;
+			float: right;
+			padding: 20px;
+			opacity: initial;
+			
+			span{
+				font-family: $myFont;
+				font-size: 1vw;
+				font-weight: 100;
+				color: #FFF;
+				text-transform: uppercase;
+				
+				@media screen and (min-width: 401px) and (max-width: 700px){
+					font-size: 2vw;
+				}
+			}
+			
+			.glyphicon{
+				font-family: 'Glyphicons Halflings';
+			}
+		}
+		
+		@media screen and (max-width: 400px){
+			.close{
+				span{
+					font-family: $myFont;					
+					font-size: 3.5vw;
+				}
+			}
+			
+			.logo{
+				width: 40%;
+			}
+		
+			.onDesktop{
+				display: none;
+			}
+		}
+	}
+	
+	.content{		
+		overflow: hidden;
+		position: absolute;
+		top: 60px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	
+	.cta{
+		padding: 3%;
+		position: absolute;
+		top: 0px;
+		bottom: 38%;
+		right: 0px;
+		z-index: 3;
+		display: none;
+		
+		@media screen and (max-width: 400px){
+			bottom: 12%;
+			
+			.cta-title{
+				font-family: $myFont;
+				font-size: 2.3vh !important;
+			}
+			h3{
+				font-family: $myFont;
+				font-size: 2.1vh !important;
+				margin-top: 3%;
+				margin-bottom: 3%;
+			}			
+		}
+		
+		.cta-title{
+			font-family: $myFont;
+			font-size: 130%;
+			font-size: 1.4vw;
+			font-weight: bold;
+			margin-top: 0;
+			margin-bottom: 0;
+			text-align: center;
+			text-transform: uppercase;
+			color: #b0b0b0;				
+		}
+		
+		h3{
+			font-family: $myFont;
+			font-size: 85%;
+			font-size: 1vw;
+			font-weight: bold;
+			text-align: center;
+			color: #FFF;
+			margin-top: 1%;
+			margin-bottom: 1%;
+		}
+		
+		.row{
+			width: 50%;
+			height: 20%;
+			margin-left: auto;
+			margin-right: auto;
+			
+			@media screen and (max-width: 400px){
+				width: 75%;
+				height: 50%;
+			}
+		}
+		
+		.form-control{
+			width: 40%;
+			height: 100%;
+			margin-right: 1%;
+			padding: 1px 12px;		
+			border-radius: 0;
+			border: 1px solid #464646;
+			background-color: #000;
+			color: #FFF;
+			
+			&:hover{
+				border: 1px solid rgb(235, 10, 30);
+			}
+			
+			@media screen and (max-width: 400px){
+				width: 100%;
+				height: 30%;
+				margin-top: 3%;
+			}
+			
+			@media screen and (min-width: 401px) and (max-width: 700px){
+				font-size: 7px;
+			}
+		}
+		
+		.cta-btn{
+			width: 18%;
+			height: 100%;
+			padding: 0.4%;
+			border-radius: 0;
+			float: initial;
+			background-color: rgb(235, 10, 30);
+			font-family: $myFont;
+			font-size: 1.7vh;
+			text-transform: uppercase;
+			color: #FFF;
+			overflow: hidden;
+			
+				&:hover{
+					background-color: #FFF;
+					color: rgb(235, 10, 30);
+				}	
+				
+				@media screen and (max-width: 400px){
+					width: 25%;
+					height: 20%; 
+					margin-top: 3%;
+					float: right;
+				}
+		}
+		
+/*		.cta-btn{
+			width: 25%;
+			height: 28%;
+			padding: 1%;
+			border-radius: 0;
+			float: right;
+			margin-left: 10px;
+			background-color: rgb(235, 10, 30);
+			font-size: 1.7vh;
+			text-transform: uppercase;
+			color: #FFF;
+			
+				&:hover{
+					background-color: #FFF;
+					color: rgb(235, 10, 30);
+				}	
+				
+				@media screen and (max-width: 400px){
+					width: 25%;
+					height: 10%;
+				}
+		}
+		
+		.input-group{
+			width: 50%;
+			display: flex;
+			display: -moz-box;
+			margin-top: 1.5%;
+			margin-left: 20vw;
+			margin-right: auto;
+			
+			@media screen and (max-width: 400px){
+				width: 90%;
+				display: block;
+				margin-left: auto;
+				
+				.form-control{
+					margin-top: 5px;
+					margin-left: 0;
+					@media screen and (max-width: 400px){
+						height: initial;
+					}
+				}
+				
+				.cta-btn{
+					margin-top: 5px;
+				}
+			}
+			
+		} 
+		
+		.form-control{
+			height: 28%;
+			font-size: 1.7vh;
+			border-radius: 0;
+			border: 1px solid #464646;
+			background-color: #000;
+			color: #FFF;
+			margin-left: 10px;
+			
+			&:hover{
+				border: 1px solid rgb(235, 10, 30);
+			}
+		} */
+	}
+	
+	.mascara{
+		width: 100%;
+		height: 100%;
+		background: url('../img/bg-car4.jpg');
+		
+		background-size: 100%;
+		background-repeat: no-repeat;
+		position: absolute;
+		bottom: 0;
+		
+		@media screen and (max-width: 400px){
+			background-position-y: 50%;
+		}
+		
+		.title{
+			position: absolute;
+			bottom: 20px;
+			left: 60px;
+	
+			h1{font-family: $myFont; font-size: 4vw; font-style: italic; text-transform: uppercase; margin: 0; color: #fff;}			
+			.red{ color: #FD2237; font-weight: bold; margin-left: 40px;}
+			
+			@media screen and (max-width: 400px){
+				text-align: center;
+				top: 10%;
+				left: 0;
+				right: 0;
+				
+				h1{font-size: 6vw;}
+				.red{margin: 0;}
+			}
+		}
+		
+		.descricao{
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+			text-align: right;
+			
+			h1{font-family: $myFont; font-size: 2vw; font-style: italic; font-weight: bold; color: #FD2237;
+			i{color: #FFF;}}			
+			h2{font-family: $myFont; font-size: 1.2vw; font-style: italic; color: #FFF;}			
+			.red{color: #FD2237;}			
+			h3{font-family: $myFont; font-size: 1vw; font-style: italic; color: #fff;}
+			
+			@media screen and (max-width: 400px){
+				text-align: center;
+				bottom: 15%;
+				left: 0;
+				right: 0;
+				
+				h1{font-size: 5vw;}
+				h2{font-size: 4vw;}
+				h3{font-size: 4vw;}
+			}
+		}
+	}
+	
+	.head{
+		height: 50%;
+		background: url('../img/faixa.png');
+		background-size: 101%;
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		z-index: 3;
+		
+		.logo-lince{
+			width: 15%;
+			height: 35%;
+			background: url('../img/lince.png');
+			background-repeat: no-repeat;
+			background-position: 0;			
+			background-size: 100%;
+			position: absolute;
+			top: 20%;
+			left: 1%;
+			
+			@media screen and (max-width: 400px){
+				width: 30%;
+				height: 35%;
+				top: 55%;
+				left: 2%;
+			}
+		}
+	}
+	
+	.carro{
+		height: 70%;
+		background: url('../img/sw4_branco.png');
+		background-size: 113%;
+		background-repeat: no-repeat !important;
+		background-position-x: 2%;
+		background-position-y: 5%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: none;
+		
+		@media screen and (max-width: 400px){
+			background-size: 230%;
+			background-position-x: 73%;
+			background-position-y: 80%;
+		}
+		
+		@media screen and (max-height: 590px){
+			background-size: 200%;
+			background-position-x: 73%;
+			background-position-y: 70%;
+		}
+		
+		@media screen and (max-height: 550px){
+			background-size: 187%;
+			background-position-x: 73%;
+			background-position-y: 67%;
+		}
+		
+		.carroTitle{
+			display: none;
+			position: absolute;
+			bottom: 30%;
+			left: 1%;
+			
+			h1{
+				font-family: $myFont;
+				font-size: 110%;
+				font-size: 1.2vw;
+				font-style: italic;
+				color: #FFF;
+				/*color: #FD2237;*/	
+				
+				span{
+					font-family: $myFont;
+					color: #FD2237;
+					font-weight: bold;
+				}					
+				
+				@media screen and (max-width: 400px){
+					font-size: 4vw;
+				}				
+			}
+		}
+		
+		.cores{
+			width: 50%;
+			height: 18%;
+			display: none;
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			z-index: 3;
+						
+			@media screen and (max-width: 400px){
+				width: 100%;
+				height: 8%;
+				bottom: 64px;		
+			}
+						
+			.cor{
+				width: 15%;
+				height: 100%;
+				margin-right: 5px;
+				background-repeat: no-repeat;
+				background-size: 100%;				
+			}
+			
+			.corhover{
+				opacity: 0.5;
+			}
+		}
+		
+		.atitude{background: url('../img/miniaturas/sw4_miniAtitude.gif');}
+		.branco{background: url('../img/miniaturas/sw4_miniBranco.gif');}
+		.granito{background: url('../img/miniaturas/sw4_miniGranito.gif');}			
+		.nevoa{background: url('../img/miniaturas/sw4_miniNevoa.gif');}
+		.polar{background: url('../img/miniaturas/sw4_miniPolar.gif');}
+		.urban{background: url('../img/miniaturas/sw4_miniUrban.gif');}
+		
+		.logo{
+			width: 30%;
+			height: 30%;
+			background:url('../img/logo_sw4.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+			position: absolute;
+			bottom: 35%;
+			left: 20px;
+			z-index: 3;
+			display: none;
+			
+			@media screen and (max-width: 400px){
+				bottom: 10%;
+			}
+		}
+	 
+	}
+}   	
