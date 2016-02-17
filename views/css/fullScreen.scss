@@ -219,7 +219,7 @@ body{
 			float: initial;
 			background-color: rgb(235, 10, 30);
 			font-family: $myFont;
-			font-size: 3vw;
+			font-size: 1vw;
 			text-transform: uppercase;
 			color: #FFF;
 			overflow: hidden;
@@ -232,6 +232,7 @@ body{
 				@media screen and (max-width: 400px){
 					width: 25%;
 					height: 20%; 
+					font-size: 4vw;
 					margin-top: 3%;
 					float: right;
 				}
@@ -318,33 +319,14 @@ body{
 		bottom: 0;
 		
 		@media screen and (max-width: 400px){
-			background-position-y: 50%;
+			background-position-y: 20%;
 		}
-		
-		.title{
-			position: absolute;
-			bottom: 20px;
-			left: 60px;
-	
-			h1{font-family: $myFont; font-size: 4vw; font-style: italic; text-transform: uppercase; margin: 0; color: #fff;}			
-			.red{ color: #FD2237; font-weight: bold; margin-left: 40px;}
-			
-			@media screen and (max-width: 400px){
-				text-align: center;
-				top: 10%;
-				left: 0;
-				right: 0;
 				
-				h1{font-size: 6vw;}
-				.red{margin: 0;}
-			}
-		}
-		
 		.descricao{
 			position: absolute;
-			right: 20px;
+			left: 20px;
 			bottom: 20px;
-			text-align: right;
+			text-align: left;
 			
 			h1{font-family: $myFont; font-size: 2vw; font-style: italic; font-weight: bold; color: #FD2237;
 			i{color: #FFF;}}			
@@ -354,7 +336,7 @@ body{
 			
 			@media screen and (max-width: 400px){
 				text-align: center;
-				bottom: 15%;
+				bottom: 30%;
 				left: 0;
 				right: 0;
 				

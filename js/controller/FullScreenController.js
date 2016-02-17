@@ -96,17 +96,17 @@ app.controller('fullScreenController', ['$scope', function($scope, $window) {
 			e.stopPropagation();
 		});
 		
-		$('.mascara').delay(4000).animate({ 
+		$('.mascara').delay(5000).animate({ 
 			bottom: "100%",
 		}, 3000, function(){}).fadeOut(1000);
 		
-		$('.head').delay(4000).animate({
+		$('.head').delay(5000).animate({
 			top: 0,
 		}, 3000, function(){});
 		
-		$('.carro').delay(7000).fadeIn(1000);
+		$('.carro').delay(8000).fadeIn(1000);
 		
-		$('.toShow').delay(7000).fadeIn(1000);
+		$('.toShow').delay(8000).fadeIn(1000);
 		$('.toShowFlex').css("display", "flex").delay(8000).fadeIn(1000);
 		
 		
