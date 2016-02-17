@@ -50,7 +50,7 @@ body {
       height: 100%;
       float: right;
       padding: 20px;
-      opacity: initial; }
+      opacity: 1; }
       .fullScreen header .close span {
         font-family: "Source Sans Pro", sans-serif;
         font-size: 1vw;
@@ -78,7 +78,9 @@ body {
     left: 0;
     right: 0; }
   .fullScreen .cta {
-    padding: 3%;
+    width: 75%;
+    height: 50%;
+    padding: 5%;
     position: absolute;
     top: 0px;
     bottom: 38%;
@@ -151,25 +153,33 @@ body {
     		} */ }
     @media screen and (max-width: 400px) {
       .fullScreen .cta {
+        width: 100%;
+        height: 100%;
+        top: 7%;
         bottom: 12%; }
-        .fullScreen .cta .cta-title {
-          font-family: "Source Sans Pro", sans-serif;
-          font-size: 2.3vh !important; }
         .fullScreen .cta h3 {
           font-family: "Source Sans Pro", sans-serif;
-          font-size: 2.1vh !important;
+          font-size: 6vw !important;
           margin-top: 3%;
           margin-bottom: 3%; } }
     .fullScreen .cta .cta-title {
       font-family: "Source Sans Pro", sans-serif;
       font-size: 130%;
-      font-size: 1.4vw;
+      font-size: 2vw;
       font-weight: bold;
       margin-top: 0;
-      margin-bottom: 0;
       text-align: center;
       text-transform: uppercase;
-      color: #b0b0b0; }
+      color: #b0b0b0;
+      position: absolute;
+      top: 35%;
+      left: 32%; }
+      @media screen and (max-width: 400px) {
+        .fullScreen .cta .cta-title {
+          font-family: "Source Sans Pro", sans-serif;
+          font-size: 5.4vw !important;
+          top: 5%;
+          left: 19%; } }
     .fullScreen .cta h3 {
       font-family: "Source Sans Pro", sans-serif;
       font-size: 85%;
@@ -180,17 +190,22 @@ body {
       margin-top: 1%;
       margin-bottom: 1%; }
     .fullScreen .cta .row {
-      width: 50%;
+      width: 75%;
       height: 20%;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      position: absolute;
+      top: 58%;
+      left: 12%; }
       @media screen and (max-width: 400px) {
         .fullScreen .cta .row {
           width: 75%;
-          height: 50%; } }
+          height: 50%;
+          top: 10%;
+          left: 12%; } }
     .fullScreen .cta .form-control {
       width: 40%;
-      height: 100%;
+      height: 2vw;
       margin-right: 1%;
       padding: 1px 12px;
       border-radius: 0;
@@ -204,18 +219,18 @@ body {
           width: 100%;
           height: 30%;
           margin-top: 3%; } }
-      @media screen and (min-width: 401px) and (max-width: 700px) {
+      @media screen and (min-width: 500px) and (max-width: 1024px) {
         .fullScreen .cta .form-control {
-          font-size: 7px; } }
+          font-size: 1vw; } }
     .fullScreen .cta .cta-btn {
       width: 18%;
-      height: 100%;
+      height: 2vw;
       padding: 0.4%;
       border-radius: 0;
       float: initial;
       background-color: #eb0a1e;
       font-family: "Source Sans Pro", sans-serif;
-      font-size: 1.7vh;
+      font-size: 3vw;
       text-transform: uppercase;
       color: #FFF;
       overflow: hidden; }
@@ -228,6 +243,9 @@ body {
           height: 20%;
           margin-top: 3%;
           float: right; } }
+      @media screen and (min-width: 500px) and (max-width: 1024px) {
+        .fullScreen .cta .cta-btn {
+          font-size: 1vw; } }
   .fullScreen .mascara {
     width: 100%;
     height: 100%;
@@ -279,14 +297,14 @@ body {
           color: #FFF; }
       .fullScreen .mascara .descricao h2 {
         font-family: "Source Sans Pro", sans-serif;
-        font-size: 1.2vw;
+        font-size: 1.7vw;
         font-style: italic;
         color: #FFF; }
       .fullScreen .mascara .descricao .red {
         color: #FD2237; }
       .fullScreen .mascara .descricao h3 {
         font-family: "Source Sans Pro", sans-serif;
-        font-size: 1vw;
+        font-size: 1.7vw;
         font-style: italic;
         color: #fff; }
       @media screen and (max-width: 400px) {
@@ -358,8 +376,14 @@ body {
     .fullScreen .carro .carroTitle {
       display: none;
       position: absolute;
-      bottom: 30%;
+      bottom: 27%;
       left: 1%; }
+      @media screen and (max-width: 400px) {
+        .fullScreen .carro .carroTitle {
+          bottom: 23%; } }
+      @media screen and (max-height: 570px) {
+        .fullScreen .carro .carroTitle {
+          bottom: 26%; } }
       .fullScreen .carro .carroTitle h1 {
         font-family: "Source Sans Pro", sans-serif;
         font-size: 110%;
@@ -393,20 +417,40 @@ body {
         margin-right: 5px;
         background-repeat: no-repeat;
         background-size: 100%; }
+      .fullScreen .carro .cores .colorName {
+        width: 100%;
+        height: 20%;
+        position: absolute;
+        top: -17%;
+        left: 0;
+        text-align: left; }
+        .fullScreen .carro .cores .colorName h1 {
+          font-family: "Source Sans Pro", sans-serif;
+          font-size: 13px;
+          font-size: 1.5vh;
+          margin: 0;
+          color: #FFF; }
+          @media screen and (min-width: 500px) and (max-width: 1024px) {
+            .fullScreen .carro .cores .colorName h1 {
+              font-size: 9px;
+              font-size: 1vw; } }
+        @media screen and (max-width: 400px) {
+          .fullScreen .carro .cores .colorName {
+            display: none; } }
       .fullScreen .carro .cores .corhover {
         opacity: 0.5; }
     .fullScreen .carro .atitude {
-      background: url("../img/miniaturas/sw4_miniAtitude.gif"); }
+      background: url("../img/miniaturas/sw4_miniAtitude.png"); }
     .fullScreen .carro .branco {
-      background: url("../img/miniaturas/sw4_miniBranco.gif"); }
+      background: url("../img/miniaturas/sw4_miniBranco.png"); }
     .fullScreen .carro .granito {
-      background: url("../img/miniaturas/sw4_miniGranito.gif"); }
+      background: url("../img/miniaturas/sw4_miniGranito.png"); }
     .fullScreen .carro .nevoa {
-      background: url("../img/miniaturas/sw4_miniNevoa.gif"); }
+      background: url("../img/miniaturas/sw4_miniNevoa.png"); }
     .fullScreen .carro .polar {
-      background: url("../img/miniaturas/sw4_miniPolar.gif"); }
+      background: url("../img/miniaturas/sw4_miniPolar.png"); }
     .fullScreen .carro .urban {
-      background: url("../img/miniaturas/sw4_miniUrban.gif"); }
+      background: url("../img/miniaturas/sw4_miniUrban.png"); }
     .fullScreen .carro .logo {
       width: 30%;
       height: 30%;
@@ -421,5 +465,8 @@ body {
       @media screen and (max-width: 400px) {
         .fullScreen .carro .logo {
           bottom: 10%; } }
+      @media screen and (max-height: 570px) and (max-width: 400px) {
+        .fullScreen .carro .logo {
+          bottom: 15%; } }
 
 /*# sourceMappingURL=fullScreen.css.map */

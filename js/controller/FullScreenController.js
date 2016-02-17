@@ -1,26 +1,26 @@
 app.controller('fullScreenController', ['$scope', function($scope, $window) {
 
 	$scope.cores = [
+		{
+			nome: "Branco Polar",
+		    cor: "polar",
+		},	                
 	    {
-	    	nome: "Preto Atitude",
-	    	cor: "atitude",
+	        nome: "Branco Perolizado",
+	        cor: "branco",
 	    },
 	    {
-	    	nome: "Branco Perolizado",
-	    	cor: "branco",
-	    },
+	    	nome: "Prata Névoa",
+	        cor: "nevoa",
+	    },	
 	    {
 	    	nome: "Cinza Granito",
 	        cor: "granito",
-	    },
+	    },	    
 	    {
-	    	nome: "Prata NÃ©voa",
-	        cor: "nevoa",
-	    },
-	    {
-	    	nome: "Branco Polar",
-	        cor: "polar",
-	    },
+	    	nome: "Preto Atitude",
+	    	cor: "atitude",
+	    },		   
 	    {
 	    	nome: "Marrom Urban",
 	    	cor: "urban",
@@ -47,6 +47,27 @@ app.controller('fullScreenController', ['$scope', function($scope, $window) {
 				"opacity": "1",
 			});			
 		}
+		if($(window).height() > 551 && $(window).height() < 590 && $(window).width() < 400){
+			$('.carro').css({
+				"background":"url('views/img/sw4_"+ color +".png')",
+				"background-size": "200%",
+				"background-position-x": "73%",
+				"background-position-y": "70%",
+				"-webkit-filter":"brightness(100%)",
+				"opacity": "1",
+			});			
+		}
+		if($(window).height() < 550 && $(window).width() < 400){
+			$('.carro').css({
+				"background":"url('views/img/sw4_"+ color +".png')",
+				"background-size": "187%",
+				"background-position-x": "73%",
+				"background-position-y": "67%",
+				"-webkit-filter":"brightness(100%)",
+				"opacity": "1",
+			});			
+		}
+		
 	}
 
 	$scope.focusColor = function(color){
@@ -75,18 +96,18 @@ app.controller('fullScreenController', ['$scope', function($scope, $window) {
 			e.stopPropagation();
 		});
 		
-		$('.mascara').delay(5000).animate({
+		$('.mascara').delay(4000).animate({ 
 			bottom: "100%",
 		}, 3000, function(){}).fadeOut(1000);
 		
-		$('.head').delay(5000).animate({
+		$('.head').delay(4000).animate({
 			top: 0,
 		}, 3000, function(){});
 		
-		$('.carro').delay(8000).fadeIn(1000);
+		$('.carro').delay(7000).fadeIn(1000);
 		
-		$('.toShow').delay(9000).fadeIn(1000);
-		$('.toShowFlex').css("display", "flex").delay(9000).fadeIn(1000);
+		$('.toShow').delay(7000).fadeIn(1000);
+		$('.toShowFlex').css("display", "flex").delay(8000).fadeIn(1000);
 		
 		
 		$(window).resize(function(){
@@ -125,6 +146,11 @@ app.controller('fullScreenController', ['$scope', function($scope, $window) {
 			} else {
 				$('.fullScreen').height('100%');
 				$('.content').height('100%');
+			}
+			
+			if($(window).height() < 300){
+				$('.fullScreen').removeAttr("style");
+				$('.content').height(600);		
 			}
 		};
 		

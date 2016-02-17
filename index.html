@@ -6,12 +6,11 @@
 			.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
 		</style>
 		
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
 
     <!-- Bootstrap core CSS -->
     <link href="views/css/bootstrap.min.css" rel="stylesheet">
-   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,400italic,700,600italic <https://fonts.googleapis.com/css?family=Source+Sans+Pro:400%2c300italic%2c400italic%2c700%2c600italic> ' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">   
 
     
 
@@ -45,7 +44,7 @@
 				</svg>
 			</div>
 			<div class="close">
-				<span>Continue lendo o <span class="onDesktop">O Popular</span> <span class="glyphicon glyphicon-chevron-right"/></span>
+				<span>Continue lendo <span class="onDesktop">O Popular</span> <span class="glyphicon glyphicon-chevron-right"/></span>
 			</div>
 		</header>
 			
@@ -59,26 +58,35 @@
 					</div>
 					<div class="descricao">
 						<h1><i>Lançamento da </i><br/>NOVA SW4</h1>
-						<h2>Dia 18/02, quinta-feira, a partir das 10h.</h2>
+						<h2>Hoje, quinta-feira, a partir das 10h.</h2>
 						<h2 class="red">Happy hour das 17 às 20h.</h2>
 						<h3>Local: Lince Motors<br/>Av. T-4, n° 107, St. Bueno</h3>
 					</div>
-					
-					
 				</div>
 				<div class="head">
 					<div class="logo-lince"></div>
 					<div class="cta toShow">
-						<h2 class="cta-title">Tão importante quanto realizar os seus sonhos é aproveitar o caminho que leva até eles.</h2>
-						<h3>Preencha o cadastro e conheça em primeira mão a perfeita 
-							  combinação de força e sofisticação da nova SW4, a SUV 
-							  Toyota feita para suas conquistas.</h3>
+						<h2 class="cta-title">Agende seu teste drive:</h3>
 						
-						<div class="row">
-							<input type="text" class="form-control col-md-6 col-sm-6 col-xs-6" placeholder="Nome" aria-describedby="basic-addon1">
-							<input type="text" class="form-control col-md-6 col-sm-6 col-xs-6" placeholder="Email" aria-describedby="basic-addon1">
-							<button class="btn cta-btn col-md-4 col-xs-4">Enviar</button>
+					<form id="conversion-form" action="https://www.rdstation.com.br/api/1.2/conversions" method="POST" class="row">
+						<input type="hidden" name="token_rdstation" value="72abae20ebfabf121d945c2cc9ea231a"> 
+						<input type="hidden" name="identificador" value="toyota">
+						<input type="hidden" name="c_utmz" value="87033158.1455645237.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)">
+						<input type="hidden" name="traffic_source" value="(none)>>87033158.1455645237.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)">
+						
+						<input type="text" name="name" id="name" required name=nome value class="form-control col-md-6 col-sm-6 col-xs-6" placeholder="Nome" aria-describedby="basic-addon1">
+						<input type="text" name="email" id="email" value required name=email class="form-control col-md-6 col-sm-6 col-xs-6" placeholder="Email" aria-describedby="basic-addon1">
+						<input name="tags" type="hidden" value="toyota"/>
+						<div class="actions">
+							<input id="cf_submit" class="btn cta-btn col-md-4 col-xs-4" type="submit" value="ENVIAR"/>			
 						</div>
+						<div style="position: absolute; left: -5000px">
+							<input type="text" name="emP7yF13ld" autocomplete="off" tabindex="-1" value="">
+							<input type="text" name="sh0uldN07ch4ng3" autocomplete="off" tabindex="-1" value="should_not_change">
+						</div>
+					</form>
+						
+<!-- 						<iframe src='http://pages.rdstation.com.br/testetag' frameborder='0' style='width: 448px; height: 21.5px; background:none; border:0'></iframe>-->
 					</div>	
 				</div>
 				<div class="carro" >
@@ -94,7 +102,9 @@
 							 ng-mouseover="focusColor(color.cor)"
 							 ng-mouseleave="unfocusColor()"
 						>
-							
+							<div class="colorName">
+								<h1>{{color.nome}}</h1>
+							</div>
 							 
 						</div>
 					</div>
@@ -104,7 +114,21 @@
 		</div>
 	</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!--Integraï¿½ï¿½o-->
+	<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js"></script> 
+	<script type="text/javascript">
+	   RdIntegration.integrate('72abae20ebfabf121d945c2cc9ea231a', 'toyota'); 
+	</script>
+	
+	<script type="text/javascript">
+	  document.getElementById('cf_submit').onclick = function() {
+	    document.getElementsByName("emP7yF13ld")[0].value = ""
+	    document.getElementsByName("sh0uldN07ch4ng3")[0].value = "should_not_change"
+	  }
+	</script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
