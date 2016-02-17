@@ -257,12 +257,32 @@ body {
     bottom: 0; }
     @media screen and (max-width: 400px) {
       .fullScreen .mascara {
-        background-position-y: 20%; } }
+        background-position-y: 40%; } }
+    .fullScreen .mascara .masc-titulo {
+      position: absolute;
+      bottom: 13%;
+      left: 1%; }
+      .fullScreen .mascara .masc-titulo h1 {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 3.8vw;
+        font-style: italic;
+        font-weight: bold;
+        color: #FD2237; }
+      .fullScreen .mascara .masc-titulo i {
+        color: #FFF; }
+      @media screen and (max-width: 400px) {
+        .fullScreen .mascara .masc-titulo {
+          top: 10%;
+          left: 0;
+          right: 0;
+          text-align: center; }
+          .fullScreen .mascara .masc-titulo h1 {
+            font-size: 5.8vw; } }
     .fullScreen .mascara .descricao {
       position: absolute;
-      left: 20px;
+      right: 20px;
       bottom: 20px;
-      text-align: left; }
+      text-align: right; }
       .fullScreen .mascara .descricao h1 {
         font-family: "Source Sans Pro", sans-serif;
         font-size: 2vw;
@@ -273,28 +293,28 @@ body {
           color: #FFF; }
       .fullScreen .mascara .descricao h2 {
         font-family: "Source Sans Pro", sans-serif;
-        font-size: 1.7vw;
+        font-size: 2.3vw;
         font-style: italic;
         color: #FFF; }
       .fullScreen .mascara .descricao .red {
         color: #FD2237; }
       .fullScreen .mascara .descricao h3 {
         font-family: "Source Sans Pro", sans-serif;
-        font-size: 1.7vw;
+        font-size: 2.3vw;
         font-style: italic;
         color: #fff; }
       @media screen and (max-width: 400px) {
         .fullScreen .mascara .descricao {
           text-align: center;
-          bottom: 30%;
+          bottom: 20%;
           left: 0;
           right: 0; }
           .fullScreen .mascara .descricao h1 {
             font-size: 5vw; }
           .fullScreen .mascara .descricao h2 {
-            font-size: 4vw; }
+            font-size: 5vw; }
           .fullScreen .mascara .descricao h3 {
-            font-size: 4vw; } }
+            font-size: 5vw; } }
   .fullScreen .head {
     height: 50%;
     background: url("../img/faixa.png");

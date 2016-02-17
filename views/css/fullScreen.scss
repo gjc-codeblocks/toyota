@@ -319,30 +319,50 @@ body{
 		bottom: 0;
 		
 		@media screen and (max-width: 400px){
-			background-position-y: 20%;
+			background-position-y: 40%;
 		}
 				
+		.masc-titulo{
+			position: absolute;
+			bottom: 13%;
+			left: 1%;
+			
+			h1{font-family: $myFont; font-size: 3.8vw; font-style: italic; font-weight: bold; color: #FD2237;}
+			i{color: #FFF;}
+			
+			@media screen and (max-width: 400px){
+				top: 10%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				
+				h1{font-size: 5.8vw;}		
+			}
+			
+			
+		}
+		
 		.descricao{
 			position: absolute;
-			left: 20px;
+			right: 20px;
 			bottom: 20px;
-			text-align: left;
+			text-align: right;
 			
 			h1{font-family: $myFont; font-size: 2vw; font-style: italic; font-weight: bold; color: #FD2237;
 			i{color: #FFF;}}			
-			h2{font-family: $myFont; font-size: 1.7vw; font-style: italic; color: #FFF;}			
+			h2{font-family: $myFont; font-size: 2.3vw; font-style: italic; color: #FFF;}			
 			.red{color: #FD2237;}			
-			h3{font-family: $myFont; font-size: 1.7vw; font-style: italic; color: #fff;}
+			h3{font-family: $myFont; font-size: 2.3vw; font-style: italic; color: #fff;}
 			
 			@media screen and (max-width: 400px){
 				text-align: center;
-				bottom: 30%;
+				bottom: 20%;
 				left: 0;
 				right: 0;
 				
 				h1{font-size: 5vw;}
-				h2{font-size: 4vw;}
-				h3{font-size: 4vw;}
+				h2{font-size: 5vw;}
+				h3{font-size: 5vw;}
 			}
 		}
 	}
