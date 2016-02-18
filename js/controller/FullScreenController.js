@@ -1,4 +1,4 @@
-app.controller('fullScreenController', ['$scope', function($scope, $window) {
+app.controller('fullScreenController', ['$scope', '$window', function($scope, $window) {
 
 	$scope.cores = [
 		{
@@ -26,7 +26,7 @@ app.controller('fullScreenController', ['$scope', function($scope, $window) {
 	    	cor: "urban",
 	    },
 	];
-	
+			
 	$scope.sectedColor = function(color){		
 		if($(window).width() > 400){
 			$('.carro').css({
@@ -63,6 +63,17 @@ app.controller('fullScreenController', ['$scope', function($scope, $window) {
 				"background-size": "187%",
 				"background-position-x": "73%",
 				"background-position-y": "67%",
+				"-webkit-filter":"brightness(100%)",
+				"opacity": "1",
+			});			
+		}
+		
+		if($(window).height() < 400 && $(window).width() < 400){
+			$('.carro').css({
+				"background":"url('views/img/sw4_"+ color +".png')",
+				"background-size": "176%",
+				"background-position-x": "73%",
+				"background-position-y": "75%",
 				"-webkit-filter":"brightness(100%)",
 				"opacity": "1",
 			});			

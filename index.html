@@ -21,14 +21,7 @@
  
     <link href="views/css/fullScreen.css" rel="stylesheet">
 
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="assets/js/ie-emulation-modes-warning.js"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body ng-app="fullScreenApp" class="ng-scope">
@@ -46,27 +39,20 @@
 			<div class="close">
 				<span>Continue lendo <span class="onDesktop">O Popular</span> <span class="glyphicon glyphicon-chevron-right"/></span>
 			</div>
-		</header>
+		</header> 
 			
 			<div class="content">			
 				<div class="mascara">
-<<<<<<< HEAD
 					<div class="masc-titulo">
 						<h1><i>Lançamento da </i><br/>NOVA SW4</h1>
 					</div>
-				
+				 
 					<div class="descricao">
-=======
-					<div class="descricao">
-						<h1><i>LanÃ§amento da </i><br/>NOVA SW4</h1>
->>>>>>> 45592019f9115adb65c811f1949a143e5799fb77
-						<h2>Hoje, quinta-feira, a partir das 10h.</h2>
-						<h2 class="red">Happy hour das 17 Ã s 20h.</h2>
-						<h3>Local: Lince Motors<br/>Av. T-4, nÂ° 107, St. Bueno</h3>
+						<h3>Lince Toyota<br/>Av. T-4, n° 107, St. Bueno</h3>
 					</div>
 				</div>
 				<div class="head">
-					<div class="logo-lince"></div>
+					<a href="http://www.lincetoyota.com/" target="_blank"><div class="logo-lince"></div></a>
 					<div class="cta toShow">
 						<h2 class="cta-title">Agende seu test drive:</h3>
 						
@@ -91,8 +77,8 @@
 <!-- 						<iframe src='http://pages.rdstation.com.br/testetag' frameborder='0' style='width: 448px; height: 21.5px; background:none; border:0'></iframe>-->
 					</div>	
 				</div>
-				<div class="carro" >
-					<div class="logo toShow"></div>
+				<div class="carro">
+					<a href="http://www.lincetoyota.com/" target="_blank"><div class="logo toShow"></div></a>
 					<div class="carroTitle toShow">
 						<h1>Escolha a cor da sua <span>NOVA SW4</span>:</h1>
 					</div>				
@@ -144,4 +130,16 @@
     <script src="js/controller/MainController.js"></script>
     <script src="js/controller/CarController.js"></script>
     <script src="js/controller/FullScreenController.js"></script>
-</body></html> 
+    
+    <!--Analytics-->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-73977048-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+    
+</body></html>

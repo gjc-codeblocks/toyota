@@ -24,6 +24,7 @@ body{
 	
 	@media screen and (max-width: 400px){
 		height: 100%;
+		max-height: 680px;
 	}
 	
 	@media screen and (min-width: 1300px){
@@ -116,8 +117,7 @@ body{
 		height: 50%;
 		padding: 5%;
 		position: absolute;
-		top: 0px;
-		bottom: 38%;
+		bottom: 53%;
 		right: 0px;
 		z-index: 3;
 		display: none;
@@ -344,9 +344,9 @@ body{
 		
 		.descricao{
 			position: absolute;
-			right: 20px;
+			left: 20px;
 			bottom: 20px;
-			text-align: right;
+			text-align: left;
 			
 			h1{font-family: $myFont; font-size: 2vw; font-style: italic; font-weight: bold; color: #FD2237;
 			i{color: #FFF;}}			
@@ -381,7 +381,7 @@ body{
 		
 		.logo-lince{
 			width: 15%;
-			height: 35%;
+			height: 50%;
 			background: url('../img/lince.png');
 			background-repeat: no-repeat;
 			background-position: 0;			
@@ -394,6 +394,13 @@ body{
 				width: 30%;
 				height: 35%;
 				top: 55%;
+				left: 2%;
+			}
+			
+			@media screen and (max-height: 400px){
+				width: 25%;
+				height: 35%;
+				top: 53%;
 				left: 2%;
 			}
 		}
@@ -430,6 +437,12 @@ body{
 			background-position-y: 67%;
 		}
 		
+		@media screen and (max-height: 400px) and (max-width: 400px){
+			background-size: 176%;
+			background-position-x: 73%;
+			background-position-y: 75%;
+		}
+		
 		.carroTitle{
 			display: none;
 			position: absolute;
@@ -442,6 +455,10 @@ body{
 			
 			@media screen and (max-height: 570px){
 				bottom: 26%;
+			}
+			
+			@media screen and (max-height: 570px) and (max-width: 400px){
+				bottom: 30%;
 			}
 			
 			h1{
@@ -491,7 +508,7 @@ body{
 				width: 100%;
 				height: 20%;
 				position: absolute;
-				top: -17%;
+				top: -20%;
 				left: 0;
 				text-align: left;
 				
@@ -527,7 +544,7 @@ body{
 		
 		.logo{
 			width: 30%;
-			height: 30%;
+			height: 36%;
 			background:url('../img/logo_sw4.png');
 			background-size: 100%;
 			background-repeat: no-repeat;
@@ -542,6 +559,10 @@ body{
 			}
 			
 			@media screen and (max-height: 570px) and (max-width: 400px){
+				bottom: 15%;
+			}
+			
+			@media screen and (max-height: 400px) and (max-width: 400px){
 				bottom: 15%;
 			}
 		}
